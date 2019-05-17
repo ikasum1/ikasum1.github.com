@@ -16,12 +16,19 @@
       </a-assets>
       
       <!-- マーカーを登録（プリセットされている「kanji」マーカー） -->
-  <a-marker preset="kanji">
+  <a-marker type="pattern" url="./ar_a.patt">
     <!-- マーカーの場所に OBJ 形式の 3DCG を置く -->
     <a-obj-model
       src="#obj"
       scale="0.005 0.005 0.005"
       position="0 0.5 0">
+      <a-animation
+        attribute="rotation"
+        to="0 360 0"
+        dur="3000"
+        easing="linear"
+        repeat="indefinite">
+      </a-animation>
     </a-obj-model>
   </a-marker>
   
